@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" type="text/css" href="css/new_file.css"/>
+	<title></title>
+</head>
+<body>
+	<div id="page1">
+		<img src="img/anniu.png" id="anniu" >
+		<img src="img/shengdanlaoren.png"id="shengdanlaoren" >
+		<div id="loading">loading...<span id="baifenbi">0</span></div>
+		<img src="img/tiao.png"id="jindutiao" >
+		<img src="img/xiaolaotou.png"id="yidong" >
+		<img src="img/shengdankuaile.png"id="shengdankuaile" >
+		<img src="img/zuoxiajiao.png" id="liwushu" >
+	</div>
+	
+	
+	<div id="page2">
+		<img src="img/圣诞树.png"id="shengdanshu" >
+		<img src="img/礼物.png"id="liwu" >
+		<div class="blink">
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+			<div></div>
+		</div>
+			<img src="img/wenzi.png"id="wenzi" >
+			<img src="img/anniu%20(2).png" id="anniu22" >
+	</div>
+	<div id="yinyue">
+		<img src="img/yinyue.png" id="music" >
+		<audio   autoplay="autoplay" loop  id="yy" >
+			<source src="medio/珍珍Cici%20-%20圣诞歌%20(钢琴版).mp3" audio="" >
+		</audio>
+		
+	</div>
+	<div id="page3">
+		<img src="img/2023.png"id="nian23" >
+			<div id="wen2">
+				&nbsp;&nbsp;&nbsp;&nbsp;还有28天过年了，嗯...提前祝你“新年快乐”。在新的一年祝你兔年大吉，兔气冲天！身体健康如兔！总之一切兔！兔！兔！
+			</div>
+			<img src="img/绿.png" id="lv">
+			<img src="img/兔子.png"id="tuzi" >
+	</div>
+	<div id="page4">
+		
+		<div id="wen3">
+			&nbsp;&nbsp;&nbsp;&nbsp;还有30天，就过生日了，生日快乐！时间过的真快呢，一定有很多人给你过生日吧，应该不缺我一个。总之呢，生日快乐！当然，我的礼物还是那个，实现你一个我可以满足的愿望奥！
+		</div>
+		<img src="img/xingxing%201.png"id="xing" >
+		<img src="img/xingxing%202.png"id="xing2" >
+		<img src="img/蛋糕.png" id="dangao" >
+		<img src="img/xiayige.png" id="anniu3" >
+		
+		
+	</div>
+	<div id="page5">
+		<h2 id="zaijian">再见</h2>
+		<div id="wen4">
+			&nbsp;&nbsp;&nbsp;&nbsp;到这结束了奥，做的还行叭，没想到你能看到最后。唉，有好多话想对你说，可是想到我们俩的关系都已经没滋没味了还能说什么呢，在山东艺术学院过的还好么，真怀念初中和高一的那几天呐，如今都。。。。<br>
+			&nbsp;&nbsp;&nbsp;&nbsp;每一次和你聊天我都忍不住的说那些话，也许心里边占的空太大了吧。并不是我想说，我觉得再不说真的没有机会了，起码心里边不遗憾就行。唉，把我删掉叭，可能这是我给你发的最后一条消息，不过，我希望你还是可以开开心心的过好每一天，做那个无忧无虑的茹宝。
+		</div>
+	</div>
+	
+	<script type="text/javascript" charset="utf-8">
+	var baifenbi=document.getElementById("baifenbi");
+	var page1=document.getElementById("page1");
+	var page2=document.getElementById("page2");
+	var page3=document.getElementById("page3");
+	var page4=document.getElementById("page4");
+	var page5=document.getElementById("page5");
+	var music=document.getElementById("music");
+	var yy=document.getElementById("yy");
+	var lv=document.getElementById("lv");
+	var anniu3=document.getElementById("anniu3");
+	var yinyue=document.getElementById("yinyue");
+	var anniu22=document.getElementById("anniu22");
+var i=0;
+var t=setInterval(function(){
+	if(i<100){
+		
+		baifenbi.innerText=i+"%";
+		i++;
+		
+		
+	}
+	else{
+		clearInterval(t);
+		baifenbi.innerText="100%";
+		page1.style.display="none";
+		page2.style.display="block";
+		yinyue.style.display="block";
+			}
+	}
+,55) 
+
+
+music.onclick = function() {
+	    if(music.style.animationPlayState=='paused')
+		{
+			music.style.animationPlayState='running';
+			yy.play();
+		}
+		else{
+			music.style.animationPlayState='paused';
+			yy.pause();
+		}
+	}
+	anniu22.onclick=function(){
+		
+		page2.style.display="none";
+		page3.style.display="block";
+		yy.pause();
+		
+	}
+	// var strw=" &nbsp;&nbsp;&nbsp;&nbsp;还有28天过年了，嗯...提前祝你“新年快乐”。在新的一年祝你兔年大吉，兔气冲天！身体健康如兔！总之一切兔！兔！兔！";
+	// var len=strw.length;
+	// var b=1;
+	// function showword(){
+	// document.getElementById("wen2").innerHTML=strw.substr(0,b);
+	// b++;
+	// if(b>len){
+	// clearInterval("done");
+	// }
+	// }
+	// var done=setInterval("showword()",400);
+	lv.onclick=function(){
+		page3.style.display="none";
+		page4.style.display="block";
+	}
+	anniu3.onclick=function(){
+		page4.style.display="none";
+		page5.style.display="block";
+	}
+	</script>
+</body>
+</html>
